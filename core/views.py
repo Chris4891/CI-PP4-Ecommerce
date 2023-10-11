@@ -123,3 +123,11 @@ class OrderSummaryView(LoginRequiredMixin, View):
         except ObjectDoesNotExist:
             messages.error(self.request, "You do not have an active order")
             return redirect("/")
+
+
+class ShopView(ListView):
+    model = Item
+    paginate_by = 6
+    template_name = "shop.html"
+
+
