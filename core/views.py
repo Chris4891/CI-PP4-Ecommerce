@@ -216,3 +216,10 @@ def home(request):
         'items': Item.objects.all()
     }
     return render(request, "index.html", context)
+
+def products(request):
+    context = {
+        'items': Item.objects.all()
+    }
+    return render(request, "product-detail.html", context)
+
