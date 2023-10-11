@@ -131,3 +131,8 @@ class ShopView(ListView):
     template_name = "shop.html"
 
 
+class ItemDetailView(DetailView):
+    model = Item
+    template_name = "product-detail.html"
+
+
