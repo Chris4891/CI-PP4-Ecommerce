@@ -124,6 +124,22 @@ class Order(models.Model):
     coupon = models.ForeignKey(
         'Coupon', on_delete=models.SET_NULL, blank=True, null=True)
     being_delivered = models.BooleanField(default=False)
+    received = models.BooleanField(default=False)
+    refund_requested = models.BooleanField(default=False)
+    refund_granted = models.BooleanField(default=False)
+
+    '''
+    1. Item added to cart
+    2. Adding a BillingAddress
+    (Failed Checkout)
+    3. Payment
+    4. Being delivered
+    5. Received
+    6. Refunds
+    '''
+
+    def __str__(self):
+        return self.user.username
 
     def get_total(self):
         total = 0
@@ -134,6 +150,20 @@ class Order(models.Model):
         return total
 
 
+class BillingAddress(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE)
+    street_address = models.CharField(max_length=100)
+    apartment_address = models.CharField(max_length=100)
+    country = CountryField(multiple=False)
+    zip = models.CharField(max_length=100)
+    address_type = models.CharField(max_length=1, choices=ADDRESS_CHOICES)
+    default = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.user.username
+
+    class Meta:
+        verbose_name_plural = 'BillingAddresses'
 
 
