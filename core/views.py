@@ -136,6 +136,10 @@ class ItemDetailView(DetailView):
     template_name = "product-detail.html"
 
 
+# class CategoryView(DetailView):
+#     model = Category
+#     template_name = "category.html"
+
 class CategoryView(View):
     def get(self, *args, **kwargs):
         category = Category.objects.get(slug=self.kwargs['slug'])
@@ -207,3 +211,8 @@ class CheckoutView(View):
             return redirect("core:order-summary")
 
 
+def home(request):
+    context = {
+        'items': Item.objects.all()
+    }
+    return render(request, "index.html", context)
