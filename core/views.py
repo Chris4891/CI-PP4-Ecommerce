@@ -20,6 +20,9 @@ import stripe
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
+def create_ref_code():
+    return ''.join(random.choices(string.ascii_lowercase + string.digits, k=20))
+
 
 class PaymentView(View):
     def get(self, *args, **kwargs):
@@ -107,3 +110,4 @@ class HomeView(ListView):
     template_name = "index.html"
     queryset = Item.objects.filter(is_active=True)
     context_object_name = 'items'
+
