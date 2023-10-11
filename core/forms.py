@@ -1,4 +1,6 @@
 from django import forms
+from django_countries.fields import CountryField
+from django_countries.widgets import CountrySelectWidget
 
 PAYMENT_CHOICES = (
     ('S', 'Stripe'),
@@ -9,6 +11,10 @@ PAYMENT_CHOICES = (
 class CheckoutForm(forms.Form):
     street_address = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': '1234 Main St',
+        'class': 'form-control'
+    }))
+    apartment_address = forms.CharField(required=False, widget=forms.TextInput(attrs={
+        'placeholder': 'Apartment or suite',
         'class': 'form-control'
     }))
     same_shipping_address = forms.BooleanField(required=False)
