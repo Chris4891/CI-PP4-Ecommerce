@@ -136,3 +136,7 @@ class ItemDetailView(DetailView):
     template_name = "product-detail.html"
 
 
+class CategoryView(DetailView):
+    model = Category
+    template_name = "category.html"
+
