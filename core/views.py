@@ -136,10 +136,17 @@ class ItemDetailView(DetailView):
     template_name = "product-detail.html"
 
 
-class CategoryView(DetailView):
-    model = Category
-    template_name = "category.html"
-
+class CategoryView(View):
+    def get(self, *args, **kwargs):
+        category = Category.objects.get(slug=self.kwargs['slug'])
+        item = Item.objects.filter(category=category, is_active=True)
+        context = {
+            'object_list': item,
+            'category_title': category,
+            'category_description': category.description,
+            'category_image': category.image
+        }
+        return render(self.request, "category.html", context)
 
 
 class CheckoutView(View):
