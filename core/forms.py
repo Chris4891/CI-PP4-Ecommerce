@@ -21,6 +21,9 @@ class CheckoutForm(forms.Form):
         'class': 'custom-select d-block w-100'
 
     }))
+    zip = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control'
+    }))
     same_shipping_address = forms.BooleanField(required=False)
     save_info = forms.BooleanField(required=False)
     payment_option = forms.ChoiceField(
