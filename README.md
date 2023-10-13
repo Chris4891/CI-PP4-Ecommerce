@@ -1,8 +1,10 @@
 # Django Shop
 
-# Live Link
+Django Shop is a sophisticated online e-commerce platform characterized by its minimalist and engaging user interface. Our primary objective at Django Shop is to offer our users an uncluttered and intuitive interface, ensuring a seamless experience while shopping for the most up-to-date and superior products. We take pride in providing our customers with an opportunity to procure high-quality products at exceptionally competitive prices, maintaining the utmost standards of excellence.
+(Developer: Kristijan Kolar)
 
-http://chris4891.pythonanywhere.com/
+
+[Live Demo](https://chris4891.pythonanywhere.com/)
 
 # Installation
 
