@@ -58,12 +58,7 @@ Django Shop is a sophisticated online e-commerce platform characterized by its m
 - As a registered user I can delete my email address
 
 #### **Site Admin**
-- As a site admin I can approve/disapprove the comments so that I can decide if the content is relevant
-- As a site admin I can create, read, update, and delete recipes so that I can manage my content
-- As a site admin I can delete or update user's comments so that I can manage my content
-- As a site admin I can delete or update user's cookbooks so that I can manage my content
-- As a site admin I can create draft recipes so that I can finish writing the content later
-- As a site admin I can create, update and delete categories so that I can manage my blog content
+
 
 
 #### **Testing User Stories**
