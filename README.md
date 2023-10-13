@@ -71,7 +71,15 @@ Django Shop is a sophisticated online e-commerce platform characterized by its m
 
 
 ### Agile Methodology
+- I used GitHub Projects to create a view, I used issues to make a to-do list for all the tasks that needed to be done.
 
+- By using this method I divided this large project into smaller chunks which made it alot easier to manage.
+
+- I mantained a checklist of wht needed to be done and what has already been done which helped me track my progress.
+
+- Agile Methodology and GitHub Projects helped me map my progress.  
+
+Click [here](https://github.com/users/Chris4891/projects/1) to view the github project
 
 [Back to Table Of Contents](#table-of-contents)
 
