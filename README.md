@@ -4,7 +4,77 @@ Django Shop is a sophisticated online e-commerce platform characterized by its m
 (Developer: Kristijan Kolar)
 
 
+![PP4](/WorkingSnaps/responsivetest.png)
+
+
 [Live Demo](https://chris4891.pythonanywhere.com/)
+
+
+## Table of Contents
+- [**User Experience**](#user-experience)
+- [**Features**](#features)
+   - [Existing Features](#existing-features)
+   - [Future Features](#future-features)
+- [**Technical Design**](#technical-design)
+   - [Agile Design](#agile-design)
+   - [Data Model](#data-model)
+   - [Wireframes](#wireframes)
+- [**Technologies Used**](#technologies-used)
+   - [Frameworks & Tools](#frameworks--tools)
+- [**Validation**](#validation)
+   - [Testing](#testing)
+   - [Device Testing](#device-testing)
+   - [Automated Testing](#automated-testing)
+- [**Bugs**](#bugs)
+   - [Solved Bugs](#solved-bugs)
+   - [Remaining Bugs](#remaining-bugs)
+- [**Deployment**](#deployment)
+- [**Credits**](#credits)
+
+
+
+
+# User Experience
+
+### **User Stories**
+
+#### **Site User**
+- As a user I can view a home page of items so that I can view one to buy
+- As a user I can view a catagories of products so that i can navigate to the desired one
+- As a user I can click on an item to view ut's details
+- As a user I can view the price on an individual product and its images
+- As a user I can register for an account so that I can interact with content
+- As a user I can add the desired item to cart
+- As a user I can view all my cart items and their grand total
+- As a user I can view add a product/item to favourites by marking it as favourite
+- As a user I can click and view the social media links for the store
+
+#### **Registered User**
+- As a registered user I can add my email address
+- As a registered user I can view my profile id
+- As a registered user I can view my social account
+- As a registered user I can logout so that other users cannot access my account
+- As a registered user I can access my profile so that I can edit my details
+- As a registered user I can delete my email address
+
+#### **Site Admin**
+- As a site admin I can approve/disapprove the comments so that I can decide if the content is relevant
+- As a site admin I can create, read, update, and delete recipes so that I can manage my content
+- As a site admin I can delete or update user's comments so that I can manage my content
+- As a site admin I can delete or update user's cookbooks so that I can manage my content
+- As a site admin I can create draft recipes so that I can finish writing the content later
+- As a site admin I can create, update and delete categories so that I can manage my blog content
+
+
+#### **Testing User Stories**
+
+
+
+### Agile Methodology
+
+
+[Back to Table Of Contents](#table-of-contents)
+
 
 # Installation
 
