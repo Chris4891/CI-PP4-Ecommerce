@@ -439,6 +439,41 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 [Fonts Awesome](https://fontawesome.com/) was used for fonts in this project. 
 
+### Agile Design
+
+- Using Github projects I created issues for User Stories, fixes and to-do list which helped me manage my task. 
+
+- As it was my first time using Agile approach, I found myself very often adding new user stories and adjusting existing user stories in different ways.
+
+#### View Board
+
+- As a visual representation of the project's status, I was using View Board. Here is the [link](https://github.com/users/Chris4891/projects/1)
+
+## Testing
+
+### Device Testing
+
+- project was tested during and post development on following devices:
+
+   - Mac
+   - Iphone 8 plus
+   - Ipad Air
+
+### Browser Testing
+
+- Project was tested during and post development on following browsers:
+
+   - Chrome
+   - Firefox
+   - Safari
+
+### Automated Testing
+
+- Automated testing was conducted utilizing the "unittest" module from the Python standard library, which is integrated with Django's unit tests. 
+
+
+[Back to Table Of Contents](#table-of-contents)
+
 # Installation
 - First we need to install django library by the following command:
 `pip install django`
