@@ -77,12 +77,71 @@ Django Shop is a sophisticated online e-commerce platform characterized by its m
 
 - I mantained a checklist of wht needed to be done and what has already been done which helped me track my progress.
 
-- Agile Methodology and GitHub Projects helped me map my progress.  
+- Agile Methodology and GitHub Projects helped me map my progress against time.  
 
 Click [here](https://github.com/users/Chris4891/projects/1) to view the github project
 
+
 [Back to Table Of Contents](#table-of-contents)
 
+
+
+# Features
+
+## Existing Features
+
+
+### Nav-bar and Logo
+
+- The Navbar features all the categories that the user can browse through.
+  
+- The c1, c2, c3 and c4 are dummy sategories that can be modifies for adding further categories of products.
+
+- The Django Shop logo was designed using canva and when clicked takes the user back to the home page of the website.
+
+- The cart option has a small counte indicating the number items in the cart (please note that for the demo setup clicking the cart returns #, main usage implemented in core)
+
+- A user can login into the website by clicking the login button on the navbar.
+
+
+![Nav-bar](/WorkingSnaps/features/navbar.png)
+
+
+### Home Page
+
+- The home page has a animated slider to keep the UI aesthetic and clean, it also has a shop now button which leads users to listed products.
+
+- All the categories of products are listed which enlarge upon clicking
+
+- Featured products are also listed
+
+- Season's Essential attire and it's image is also listed
+
+- Training essentials and more products are also listed at the bottom
+
+
+![Slider](/WorkingSnaps/features/slider.png)
+
+![Categories](/WorkingSnaps/features/categories.png)
+
+![Featured](/WorkingSnaps/features/featured.png)
+
+![Essential](/WorkingSnaps/features/essential.png)
+
+![Training](/WorkingSnaps/features/training.png)
+
+### Footer 
+
+- The footer contains all the dummy buttons that you would find on a real ecommerce shop
+
+- The contact Us button would display a pop-up with my contact details
+
+- All the buttons can be made functional for future
+
+- My copyrights have also been added at the bottom of the footer
+
+
+![Footer](/WorkingSnaps/features/footer.png)
 
 # Installation
 
