@@ -449,6 +449,23 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 - As a visual representation of the project's status, I was using View Board. Here is the [link](https://github.com/users/Chris4891/projects/1)
 
+### UI/UX
+
+- For creating UI structure I used wireframe tools on Figma and canva
+
+- Following snapshots are some that represent the home page design process
+
+`Navbar and slider`
+![Home1](/WorkingSnaps/features/Home1.png)
+
+
+`Category layout`
+![Home2](/WorkingSnaps/features/Home2.png)
+
+`Footer`
+![Home3](/WorkingSnaps/features/Home3.png)
+
+
 ## Testing
 
 ### Device Testing
