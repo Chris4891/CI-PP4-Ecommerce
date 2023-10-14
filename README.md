@@ -31,7 +31,6 @@ Django Shop is a sophisticated online e-commerce platform characterized by its m
 - [**Installation**](#installation)
    - [Mac/Linux](#for-mac-linux)
    - [Windows](#for-windows)
-- [**PostgresSQL Configuration**](#postgresql-configuration)
 - [**Admin Login**](#admin-login)
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
@@ -460,6 +459,8 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 
 `Category layout`
+
+
 ![Home2](/WorkingSnaps/features/Home2.png)
 
 `Footer`
@@ -484,12 +485,99 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
    - Firefox
    - Safari
 
-### Automated Testing
-
-- Automated testing was conducted utilizing the "unittest" module from the Python standard library, which is integrated with Django's unit tests. 
-
 
 [Back to Table Of Contents](#table-of-contents)
+
+
+## Technologies Used
+
+- Languages:
+
+   - HTML
+   - CSS
+   - Javascript
+   - Boostrap
+   - Python
+   - Django 
+
+- Libraries & Technologies:
+
+   - [Canva](https://www.canva.com/) 
+   - [Figma](https://www.figma.com/) 
+   - [Bootstrap](https://getbootstrap.com/). 
+   - [Favicon.io](https://favicon.io)
+   - [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/)
+   - [Boostrap icons](https://fontawesome.com/) 
+   - [Git](https://git-scm.com/) 
+   - [GitHub](https://github.com/)
+   - [Font Awesome](https://fonts.google.com/)
+   - [Unspalsh](https://unsplash.com/)
+   - [Pexel](https://www.pexels.com/)   
+
+- Other:
+
+[Back to Table Of Contents](#table-of-contents)
+
+## Deployment
+
+- The live preview of the Django shop have been hosted on pythonanywhere due to it's amazing streamline process and linux cli.
+
+### Postgresql Configuration
+
+Migrating from SQLite to PostgreSQL:
+Prerequisites
+Ensure you have PostgreSQL installed and running on your server.
+Have your PostgreSQL credentials (database name, username, and password) ready.
+Make sure you have a backup of your SQLite database in case anything goes wrong.
+Step 1: Install Required Packages
+Install the psycopg2 package, which is a PostgreSQL adapter for Django.
+pip install psycopg2
+
+
+'Creating a Postgresql Db'
+createdb your_database_name
+python manage.py migrate
+
+'Creating user'
+sudo -u postgres psql
+createuser --interactive --pwprompt your_username
+to exit => \q
+
+OR 
+for creating user other method:
+CREATE USER your_username WITH PASSWORD 'your_password';
+ALTER ROLE your_username SUPERUSER;
+\q
+
+### Pythonanywhere deployment
+
+- First, I signed up for an account on PythonAnywhere
+
+- After creating my account, I logged in to the PythonAnywhere dashboard.
+
+- In the dashboard, I clicked on the "Consoles" tab and opened a new "Bash" console.
+
+- In the Bash console, I navigated to my home directory (/home/chris4891/) using the cd command.
+
+- I created a virtual environment to isolate my project dependencies using the following command: `mkvirtualenv env`
+
+- Inside the virtual environment, I installed the required Python packages for my Django project using `pip install -r requirements.txt`.
+
+- I edited the settings.py file in my Django project to set up the database connection according to my requirements. I used the built-in SQLite database for simplicity or configured a remote database if needed.
+
+- In the settings.py file, I added my PythonAnywhere web app domain to the ALLOWED_HOSTS list.
+
+- Back in the PythonAnywhere dashboard, I clicked on the "Web" tab. I created a new web app, selected the version of Python, and chose the manual configuration option.
+
+- I edited the WSGI configuration file for the web app to point to my Django project.
+
+- In the "Web" tab, I updated the virtual host configuration to match the application and URL route to my Django project.
+
+- in the "Web" tab, I added URL as well as links to static files in my project which are in `static_in_env` and `media_root`.
+
+- In the PythonAnywhere dashboard, I clicked the "Reload" button for the web app to start the application.
+
+- I opened my Django web application by navigating to the provided web app URL in a web browser.
 
 # Installation
 - First we need to install django library by the following command:
@@ -524,32 +612,28 @@ Username : admin
 Password : 12345678
 ```
 
-
-# Postgresql Configuration
-
-Migrating from SQLite to PostgreSQL:
-Prerequisites
-Ensure you have PostgreSQL installed and running on your server.
-Have your PostgreSQL credentials (database name, username, and password) ready.
-Make sure you have a backup of your SQLite database in case anything goes wrong.
-Step 1: Install Required Packages
-Install the psycopg2 package, which is a PostgreSQL adapter for Django.
-pip install psycopg2
+## Credits
 
 
-'Creating a Postgresql Db'
-createdb your_database_name
-python manage.py migrate
+### Code
 
-'Creating user'
-sudo -u postgres psql
-createuser --interactive --pwprompt your_username
-to exit => \q
+- [colorlib](https://colorlib.com/) 
+- [Stack Overflow](https://stackoverflow.com/)
+- Code Institute Walkthrough Projects
 
-OR 
-for creating user other method:
-CREATE USER your_username WITH PASSWORD 'your_password';
-ALTER ROLE your_username SUPERUSER;
-\q
+
+### Tutorials
+
+   - [FreeCodeCamp](https://www.freecodecamp.org/)
+   - Code Institute Walkthrough Projects
+
+## Acknowledgements
+
+- Special Thanks to my mentor
+- Thanks to my girlfriend, family and friends for support
+- Thanks to Code Institute and fellow students on Slack channels
+
+
+[Back to Table Of Contents](#table-of-contents)
 
 
