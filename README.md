@@ -103,7 +103,7 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 - A user can login into the website by clicking the login button on the navbar.
 
-
+`Nav bar`
 ![Nav-bar](/WorkingSnaps/features/navbar.png)
 
 
@@ -119,17 +119,22 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 - Training essentials and more products are also listed at the bottom
 
-
+`Product Slide`
 ![Slider](/WorkingSnaps/features/slider.png)
 
+`Categories`
 ![Categories](/WorkingSnaps/features/categories.png)
 
+`Featured Products`
 ![Featured](/WorkingSnaps/features/featured.png)
 
+`Season's Essential`
 ![Essential](/WorkingSnaps/features/essential.png)
 
+`Training Essential`
 ![Training](/WorkingSnaps/features/training.png)
 
+`More Products`
 ![More](/WorkingSnaps/features/more.png)
 
 ### Footer 
@@ -142,7 +147,7 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 - My copyrights have also been added at the bottom of the footer
 
-
+`Footer`
 ![Footer](/WorkingSnaps/features/footer.png)
 
 # Installation
