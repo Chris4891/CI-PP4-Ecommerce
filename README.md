@@ -32,6 +32,7 @@ Django Shop is a sophisticated online e-commerce platform characterized by its m
    - [Mac/Linux](#for-mac-linux)
    - [Windows](#for-windows)
 - [**PostgresSQL Configuration**](#postgresql-configuration)
+- [**Admin Login**](#admin-login)
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
 
@@ -155,6 +156,90 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 ![Footer](/WorkingSnaps/features/footer.png)
 `Contact`
 ![Contact](/WorkingSnaps/features/contact.png)
+
+### Products
+
+- The items/Products are displayed in form of a "Product Card"
+
+- The image covers most of the are along with a product status tag.
+
+- The product could be new collection or on sale ine either case a tag is displayed on the image of the product.
+
+- The title of the item/product is displayed along with the price tag
+
+- The option to add the item to cart is displayed at the bottom
+
+![Products](/WorkingSnaps/features/products.png)
+
+### Add to cart
+
+- The item can be added to cart by selecting the respective option.
+
+- A pop-up is displayed notifying the product that has been added to the cart.
+
+![addedtocart](/WorkingSnaps/features/addedtocart.png)
+
+### Favourites
+
+- An item/product can be added to favourites by pressing the heart icon on the top right corner of the product image.
+
+![Favourites](/WorkingSnaps/features/favourite.png)
+
+### Price Filter
+
+- The user can apply a price filter.
+
+- Items would be displayed within the budget constraint given by the user.
+
+![pricefilter](/WorkingSnaps/features/pricefilter.png)
+
+### Color Filter
+
+- The user can apply a color filter.
+
+- Only the products that are themed on that particular color will be displayed.
+
+![colorfilter](/WorkingSnaps/features/colorfilter.png)
+
+### Item Search
+
+- The user can search for his/her specific product.
+
+- The matching or closest to matching results are shown to the user.
+
+![searchproduct](/WorkingSnaps/features/searchproducts.png)
+
+### Social Media
+
+- The user can click on any of the social media icon.
+
+- Upon clicking the user would be redirected to the website's social link.
+
+- Please Note that at this point in time these icons only redirect to the main social media pages.
+
+![socialmedia](/WorkingSnaps/features/socialmedia.png)
+
+### Sorting
+
+- The user can apply various sorting techniques to view the appropriate list of items.
+
+- The user can choose Default sorting.
+
+- The user can choose popularity as a sorting method.
+
+- The user can choose price: low to high as a sorting method.
+
+- The user can choose price: high to low as a sorting method.
+
+- The user can choose from predefined pricing options as a methos viewing items.
+
+![sorting](/WorkingSnaps/features/sorting.png)
+
+### View Cart
+
+- The user can view his/her items that he/she added to the cart at any time by clicking the shopping bag icon on the top right corner of website.
+
+![shoppingbag](/WorkingSnaps/features/shoppingbag.png)
 
 # Installation
 - First we need to install django library by the following command:
