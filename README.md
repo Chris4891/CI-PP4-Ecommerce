@@ -28,6 +28,10 @@ Django Shop is a sophisticated online e-commerce platform characterized by its m
 - [**Bugs**](#bugs)
    - [Solved Bugs](#solved-bugs)
    - [Remaining Bugs](#remaining-bugs)
+- [**Installation**](#installation)
+   - [Mac/Linux](#for-mac-linux)
+   - [Windows](#for-windows)
+- [**PostgresSQL Configuration**](#postgresql-configuration)
 - [**Deployment**](#deployment)
 - [**Credits**](#credits)
 
@@ -149,18 +153,21 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 `Footer`
 ![Footer](/WorkingSnaps/features/footer.png)
+`Contact`
+![Contact](/WorkingSnaps/features/contact.png)
 
 # Installation
-
+- First we need to install django library by the following command:
 `pip install django`
 
+- Then we need to create a virtual enviorment by following command:
 `virtualenv env`
 
-# For Mac/ Linux
+## For Mac/ Linux
 
 `source env/bin/activate`
 
-# For Window
+## For Windows
 
 `./env/Scripts/activate`
 
@@ -172,7 +179,9 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 `python -m manage runserver`
 
-# For Admin Login
+# Admin Login
+
+We can create a superuser for performing CRUD operations by following method:
 
 ```python
 python manage.py createsuperuser
