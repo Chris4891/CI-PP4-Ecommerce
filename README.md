@@ -629,8 +629,7 @@ Password : 12345678
 
 ## Acknowledgements
 
-- Special Thanks to my mentor
-- Thanks to my girlfriend, family and friends for support
+- Special thanks to my girlfriend, family and friends for support
 - Thanks to Code Institute and fellow students on Slack channels
 
 
