@@ -331,7 +331,7 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 - This includes setting the coupon's unique code and amount.
 
-![Add coupons](/WorkingSnaps/features/addcooupon.png)
+![Add coupons](/WorkingSnaps/features/addcoupon.png)
 
 ### Add Category
 
@@ -428,6 +428,16 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 - It can be switched to light/dark/default
 
 ![Theme](/WorkingSnaps/features/theme.png)
+
+## Technical Design
+
+[Coolors.co](https://coolors.co/) was used to create following colour pallette. 
+
+![Colour pallette](/WorkingSnaps/features/colorpallette.png)
+
+- Tomato, white, Jordy Blue and black colour were used for Django shop.
+
+[Fonts Awesome](https://fontawesome.com/) was used for fonts in this project. 
 
 # Installation
 - First we need to install django library by the following command:
