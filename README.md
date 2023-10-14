@@ -241,6 +241,194 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 ![shoppingbag](/WorkingSnaps/features/shoppingbag.png)
 
+### Login
+
+- An autheticated user or admin can login into the website.
+
+- username and password are required for login.
+
+- Upon login users with different permissions can add delete or change different things and sections of the website.
+
+![LogIn](/WorkingSnaps/features/login.png)
+
+### Recent Actions
+
+- Upon login the user/admin can view the recent actions that have been take.
+
+- This acts as a sort of a log file for any new user or mapping the changes.
+
+![recentactions](/WorkingSnaps/features/recentactions.png)
+
+### Accounts
+
+- Upon login all the registered accounts can be viewed.
+
+- This includes the email addresses of all the users.
+
+- The ability to add more.
+
+- The ability to delete previous users account.
+
+![Accounts](/WorkingSnaps/features/accounts.png)
+
+### Authentication and Authorization
+
+- Upon login the user/admin can add groups or users.
+
+- The ability to limit each individual's permissions on website.
+
+- This feature allows to distinguish between different actors.
+
+![Authorization](/WorkingSnaps/features/authorization.png)
+
+### Core
+
+- Upon login the core features of the website can be viewed.
+
+- The ability to add any more core features to the website.
+
+- The ability to delete any existing core feature/s of the website.
+
+- The ability to modify/change the existing core features.
+
+![Core](/WorkingSnaps/features/core.png)
+
+### Social Accounts
+
+- Upon login the users would have the ability to set the Social accounts for the website.
+
+- The ability to add more social accounts such as facebook, X, Instagram to the website to increase it's reach to the potential customers.
+
+- The ability to delete any previously linked social account of the website.
+
+![SocialAccounts](/WorkingSnaps/features/SocialAccounts.png)
+
+### Add Users
+
+- Upon login the users would have the ability to add more users.
+
+- This would require a unique username.
+
+- A password for that unique username.
+
+- A confirm password for that user.
+
+- Upon adding the user his/her permissions can be set and his access can be limited.
+
+![AddUsers](/WorkingSnaps/features/adduser.png)
+
+### Add Items
+
+- Upon login the users/admin would have the ability to add items/products.
+
+- This includes adding product Title, Product's price, any discounted price, Product's category, Product's label, slug, stock no. short description and long description.
+
+![Add items](/WorkingSnaps/features/additem.png)
+
+### Add coupon
+
+- Upon login the users/admin would have the ability to add coupons.
+
+- This includes setting the coupon's unique code and amount.
+
+![Add coupons](/WorkingSnaps/features/addcooupon.png)
+
+### Add Category
+
+- Upon login the user/admin would have the ability to add product category.
+
+- This includes naming the category title, it's slug, a description for that particular category, Category image, and a flag that can bet set to active.
+
+![Add category](/WorkingSnaps/features/addcategory.png)
+
+### Add Billing Address
+
+- Upon login the users can add or delete their billing address.
+
+- This includes selecting the user(that is authenticated), his Street address, apartment address, country, zip, and address type.
+
+![Add billing](/WorkingSnaps/features/addbilling.png)
+
+### Add Order Item
+
+- Upon Login the user can add his/her order items/s.
+
+- This includes selscting the user.
+
+- Flag that tells if the item has been ordered.
+
+- Selecting the item that has been ordered.
+
+- Selecting the quantity of the item.
+
+![Add Order](/WorkingSnaps/features/addorderitem.png)
+
+### Add order
+
+- Upon login the users can add their complete order.
+
+- This can include multiple items from different categories as opposed to the previous "Add Order Item".
+
+- Multiple order parameters need to be set in order to add a complete order.
+
+![Add Order](/WorkingSnaps/features/addorder.png)
+
+### Add payment
+
+- Upon login the user can add his/her payment method.
+
+- Since the website uses stripe as payment gateway, the user must add his/her stripe charge id along with selecting his/her username and the amount.
+
+![Add Payment](/WorkingSnaps/features/addpayment.png)
+
+### Add Refund
+
+- Upon Login the users/admins can add or delete a refund.
+
+- This included selecting the approriate order.
+
+- The reason for refund.
+
+- A flag that tells if the refund is accepted or not.
+
+- And the email id of the user.
+
+![Add Refund](/WorkingSnaps/features/addrefund.png)
+
+### Add Slide
+
+- Upon Login the users can add or delete slides displayed on the home page.
+
+- This includes including the main caption and the sub-caption.
+
+- Providing the link for the slide.
+
+- Browsing for the photo on system for the slide.
+
+- A flag that tells if that slide has gone active into production or not.
+
+![Add Slide](/WorkingSnaps/features/addslide.png)
+
+### Password change
+
+- Upon login the user/admin can request to change his/her password.
+
+- This includes typing in the old password.
+
+- typing in the new password and typing it again for confirmation.
+
+![Password Change](/WorkingSnaps/features/passwordchange.png)
+
+### Theme
+
+- Upon login the user can choose the theme he/she wants.
+
+- By default it is set to dark.
+
+- It can be switched to light/dark/default
+
+![Theme](/WorkingSnaps/features/theme.png)
+
 # Installation
 - First we need to install django library by the following command:
 `pip install django`
