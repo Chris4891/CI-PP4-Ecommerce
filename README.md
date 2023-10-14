@@ -130,6 +130,8 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
 
 ![Training](/WorkingSnaps/features/training.png)
 
+![More](/WorkingSnaps/features/more.png)
+
 ### Footer 
 
 - The footer contains all the dummy buttons that you would find on a real ecommerce shop
