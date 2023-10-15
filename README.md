@@ -7,7 +7,7 @@ Django Shop is a sophisticated online e-commerce platform characterized by its m
 ![PP4](/WorkingSnaps/responsivetest.png)
 
 
-[Live Demo](https://chris4891.pythonanywhere.com/)
+[Live Heroku Demo](https://chris4891ecom-aedebe109d48.herokuapp.com)
 
 
 ## Table of Contents
