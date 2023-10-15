@@ -78,22 +78,6 @@ DATABASES = {
         # # default sqlite3 settings
          "ENGINE": "django.db.backends.sqlite3",
         "NAME": os.path.join(BASE_DIR, 'db.sqlite3')
-        # Postgresql settings
-<<<<<<< HEAD
-    #    'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': config('DATABASE_NAME'),
-    #     'USER': config('DATABASE_USER'),
-    #     'PASSWORD': config('DATABASE_PASSWORD'),
-    #     'HOST': config('DATABASE_HOST'),
-    #     'PORT': config('DATABASE_PORT', default='5432'),
-=======
-       # 'ENGINE': 'django.db.backends.postgresql',
-       #  'NAME': config('DATABASE_NAME'),
-       #  'USER': config('DATABASE_USER'),
-       #  'PASSWORD': config('DATABASE_PASSWORD'),
-       #  'HOST': config('DATABASE_HOST'),
-       #  'PORT': config('DATABASE_PORT', default='5432'),
->>>>>>> 42510f1d6b8313aa571a1a8828809facce12a882
     }
 }
 
