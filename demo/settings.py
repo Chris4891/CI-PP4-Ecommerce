@@ -1,13 +1,15 @@
 import os
 import os
 from decouple import config
+import django_heroku
+import dj_database_url
 
 ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 
 DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -69,18 +71,20 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 
+django_heroku.settings(locals())
+
 DATABASES = {
     "default": {
         # # default sqlite3 settings
-        #  "ENGINE": "django.db.backends.sqlite3",
-        # "NAME": os.path.join(BASE_DIR, 'db.sqlite3')
+         "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, 'db.sqlite3')
         # Postgresql settings
-       'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DATABASE_NAME'),
-        'USER': config('DATABASE_USER'),
-        'PASSWORD': config('DATABASE_PASSWORD'),
-        'HOST': config('DATABASE_HOST'),
-        'PORT': config('DATABASE_PORT', default='5432'),
+    #    'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': config('DATABASE_NAME'),
+    #     'USER': config('DATABASE_USER'),
+    #     'PASSWORD': config('DATABASE_PASSWORD'),
+    #     'HOST': config('DATABASE_HOST'),
+    #     'PORT': config('DATABASE_PORT', default='5432'),
     }
 }
 
