@@ -7,7 +7,7 @@ import dj_database_url
 ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 
 DEBUG = True
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(_file_)))
 SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
 ALLOWED_HOSTS = ['*']
 
@@ -66,7 +66,13 @@ USE_TZ = True
 # static files (CSS, JS, Image)
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
+
+
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static_in_env'),
+)
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
@@ -105,8 +111,8 @@ LOGIN_REDIRECT_URL = '/'
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
+        # For each OAuth based provider, either add a `SocialApp`
+        # (`socialaccount` app) containing the required client
         # credentials, or list them here:
         'APP': {
             'client_id': '123',
