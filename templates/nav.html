@@ -63,19 +63,10 @@
 						{% categories %}
 
 						{% if request.user.is_authenticated %}
-						<li>
-							<a href="{% url 'core:order-summary' %}">Cart<span class="badge badge-dark">{{
-									request.user|cart_item_count }}</span></a>
-						</li>
+						
 						<li>
 							<a href="{% url 'account_logout' %}">Logout</a>
-						</li>
-						{% else %}
-						<li>
-							<a href="#">Login</a>
-							<ul class="sub_menu">
-								<li><a href="{% url 'admin:login' %}">Login</a></li>
-							</ul>
+							
 						</li>
 						{% endif %}
 					</ul>
@@ -84,8 +75,12 @@
 
 			<!-- Header Icon -->
 			<div class="header-icons">
-				<a href="#" class="header-wrapicon1 dis-block">
+				<a href="{% url 'login' %}" class="header-wrapicon1 dis-block">
+					{% if request.user.is_authenticated %}
+						<p>{{ request.user.username }}</p>
+					{% else %}
 					<img src="{% static 'images/icons/icon-header-01.png' %}" class="header-icon1" alt="ICON">
+					{% endif %}
 				</a>
 
 				<span class="linedivide1"></span>
@@ -175,9 +170,9 @@
 	<!-- Header Mobile -->
 	<div class="wrap_header_mobile">
 		<!-- Logo moblie -->
-		    <a href="/" class="logo-mobile">
-				<p style="color: black; "><b style="font-size: 22px;">D</b>JANGO SHOP</p>
-			</a>
+		<a href="index.html" class="logo-mobile">
+			<p style="color: black; "><b style="font-size: 22px;">D</b>JANGO SHOP</p>
+		</a>
 
 		<!-- Button show menu -->
 		<div class="btn-show-menu">
@@ -281,11 +276,6 @@
 	<div class="wrap-side-menu">
 		<nav class="side-menu">
 			<ul class="main-menu">
-					<a href="https://www.facebook.com" class="topbar-social-item fab fa-facebook" target="_blank"></a>
-					<a href="https://www.instagram.com" class="topbar-social-item fab fa-instagram" target="_blank"></a>
-					<a href="https://www.pinterest.com" class="topbar-social-item fab fa-pinterest-p" target="_blank"></a>
-					<a href="https://www.twitter.com" class="topbar-social-item fab fa-twitter" target="_blank"></a>
-					<a href="https://www.youtube.com" class="topbar-social-item fab fa-youtube" target="_blank"></a>
 				<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
 					<span class="topbar-child1">
 						Free shipping for standard order over $100
@@ -295,7 +285,7 @@
 				<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
 					<div class="topbar-child2-mobile">
 						<span class="topbar-email">
-							fashe@example.com
+							Djangoshop@chris.com
 						</span>
 
 						<div class="topbar-language rs1-select2">
@@ -304,16 +294,18 @@
 								<option>EUR</option>
 							</select>
 						</div>
+							
 					</div>
 				</li>
 
 				<li class="item-topbar-mobile p-l-10">
 					<div class="topbar-social-mobile">
-						<a href="#" class="topbar-social-item fa fa-facebook"></a>
-						<a href="#" class="topbar-social-item fa fa-instagram"></a>
-						<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-						<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-						<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+							<a href="https://www.facebook.com" class="topbar-social-item fab fa-facebook" target="_blank"></a>
+							<a href="https://www.instagram.com" class="topbar-social-item fab fa-instagram" target="_blank"></a>
+							<a href="https://www.pinterest.com" class="topbar-social-item fab fa-pinterest-p" target="_blank"></a>
+							<a href="https://www.twitter.com" class="topbar-social-item fab fa-twitter" target="_blank"></a>
+							<a href="https://www.youtube.com" class="topbar-social-item fab fa-youtube" target="_blank"></a>
+			
 					</div>
 				</li>
 
@@ -328,10 +320,7 @@
 				{% categories_mobile %}
 
 				{% if request.user.is_authenticated %}
-				<li class="item-menu-mobile">
-					<a href="{% url 'core:order-summary' %}">Cart<span class="badge badge-dark">{{
-							request.user|cart_item_count }}</span></a>
-				</li>
+				
 				<li class="item-menu-mobile">
 					<a href="{% url 'account_logout' %}">Logout</a>
 				</li>

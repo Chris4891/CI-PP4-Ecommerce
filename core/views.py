@@ -1,3 +1,5 @@
+from .models import Item  # Import your actual item model
+from .forms import ItemForm
 from django.conf import settings
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
@@ -9,7 +11,7 @@ from django.shortcuts import redirect
 from django.utils import timezone
 from .forms import CheckoutForm, CouponForm, RefundForm
 from .models import Item, OrderItem, Order, BillingAddress, Payment, Coupon, Refund, Category
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 
 
@@ -22,6 +24,35 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def create_ref_code():
     return ''.join(random.choices(string.ascii_lowercase + string.digits, k=20))
+
+
+@login_required
+def create_item(request):
+    if request.method == 'POST':
+        form = ItemForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('/shop')
+        else:
+            print(form.errors)
+    else:
+        form = ItemForm()
+
+    return render(request, 'create_item.html', {'form': form})
+
+
+@login_required
+def delete_item(request):
+    if request.method == 'POST':
+        item_id = request.POST.get('item_id')
+        item = get_object_or_404(Item, id=item_id)
+
+        # Perform the item deletion logic here
+        item.delete()
+
+    # Redirect to the appropriate page after deletion
+    # Replace with your actual redirect URL
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 class PaymentView(View):

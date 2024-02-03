@@ -1,11 +1,18 @@
 from django import forms
 from django_countries.fields import CountryField
 from django_countries.widgets import CountrySelectWidget
+from .models import Item
 
 PAYMENT_CHOICES = (
     ('S', 'Stripe'),
     ('P', 'PayPal')
 )
+
+
+class ItemForm(forms.ModelForm):
+    class Meta:
+        model = Item
+        fields = ['title', 'price', 'discount_price', 'category', 'label', 'slug', 'stock_no', 'description_short', 'description_long', 'image']
 
 
 class CheckoutForm(forms.Form):

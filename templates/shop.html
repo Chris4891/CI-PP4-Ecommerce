@@ -159,6 +159,9 @@
 
 								</select>
 							</div>
+							<div class="rs2-select2 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
+								<a href="{% url 'core:create_item' %}" class="btn btn-success">Create New Item</a>
+							</div>
 						</div>
 
 						<span class="s-text8 p-t-5 p-b-5">
@@ -187,6 +190,15 @@
 											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
 												Add to Cart
 											</button>
+											{% if user.is_authenticated %}
+											<form method="post" action="{% url 'core:delete_item' %}">
+												{% csrf_token %}
+												<input type="hidden" name="item_id" value="{{ item.id }}">
+												<button type="submit" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" style="margin-top: 10px">
+													Delete
+												</button>
+											</form>
+											{% endif %}
 										</div>
 									</div>
 								</div>

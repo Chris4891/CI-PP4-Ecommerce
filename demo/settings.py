@@ -1,15 +1,13 @@
 import os
 import os
 from decouple import config
-import django_heroku
-import dj_database_url
 
 ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 
 DEBUG = True
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(_file_)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -25,7 +23,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'crispy_forms',
     'django_countries',
-    'core'
+    'core',
+    'accAuth'
 ]
 
 MIDDLEWARE = [
@@ -66,31 +65,23 @@ USE_TZ = True
 # static files (CSS, JS, Image)
 
 STATIC_URL = '/static/'
-
-
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static_in_env'),
-)
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 
-
-
 DATABASES = {
     "default": {
         # default sqlite3 settings
-        #  "ENGINE": "django.db.backends.sqlite3",
-        # "NAME": os.path.join(BASE_DIR, 'db.sqlite3')
+         "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, 'db.sqlite3')
         # Postgresql settings
-       'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DATABASE_NAME'),
-        'USER': config('DATABASE_USER'),
-        'PASSWORD': config('DATABASE_PASSWORD'),
-        'HOST': config('DATABASE_HOST'),
-        'PORT': config('DATABASE_PORT', default='5432'),
+    #    'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': config('DATABASE_NAME'),
+    #     'USER': config('DATABASE_USER'),
+    #     'PASSWORD': config('DATABASE_PASSWORD'),
+    #     'HOST': config('DATABASE_HOST'),
+    #     'PORT': config('DATABASE_PORT', default='5432'),
     }
 }
 
@@ -118,8 +109,8 @@ LOGIN_REDIRECT_URL = '/'
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        # For each OAuth based provider, either add a `SocialApp`
-        # (`socialaccount` app) containing the required client
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
         'APP': {
             'client_id': '123',
@@ -135,5 +126,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 STRIPE_PUBLIC_KEY = 'pk_test_lX3r6OMjOU2yzFsNSHq6belT00EY82kZmH'
 STRIPE_SECRET_KEY = 'sk_test_tn0CTDaIJHUJyAqhsf39cfsC00LNjsqDnb'
-
-django_heroku.settings(locals())
