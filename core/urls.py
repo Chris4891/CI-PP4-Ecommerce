@@ -13,7 +13,7 @@ from .views import (
     RequestRefundView,
     CategoryView,
     delete_item,
-    create_item
+    create_item,
 )
 
 app_name = 'core'

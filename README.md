@@ -25,6 +25,7 @@ Django Shop is a sophisticated online e-commerce platform characterized by its m
    - [Testing](#testing)
    - [Device Testing](#device-testing)
    - [Automated Testing](#automated-testing)
+- [**Database Schema**](#database-schema)
 - [**Bugs**](#bugs)
    - [Solved Bugs](#solved-bugs)
    - [Remaining Bugs](#remaining-bugs)
@@ -578,6 +579,12 @@ ALTER ROLE your_username SUPERUSER;
 - In the PythonAnywhere dashboard, I clicked the "Reload" button for the web app to start the application.
 
 - I opened my Django web application by navigating to the provided web app URL in a web browser.
+
+
+# Database Schema
+
+`Database Schema diagram`
+![Schema](/WorkingSnaps/schema.png)
 
 # Installation
 - First we need to install django library by the following command:
