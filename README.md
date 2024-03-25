@@ -71,8 +71,6 @@ Django Shop is a sophisticated online e-commerce platform characterized by its m
 - As a site admin I can create, update and delete categories so that I can manage my website
 
 
-#### **Testing User Stories**
-
 
 
 ### Agile Methodology
@@ -485,6 +483,12 @@ Click [here](https://github.com/users/Chris4891/projects/1) to view the github p
    - Chrome
    - Firefox
    - Safari
+
+### Automated Testing
+
+- I wrote several unit tests to validate the user acceptance criteria, i.e, all user functions as well as views were tested in the tests.py
+
+
 
 
 [Back to Table Of Contents](#table-of-contents)
