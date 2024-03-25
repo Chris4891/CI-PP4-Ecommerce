@@ -13,7 +13,7 @@ from .forms import CheckoutForm, CouponForm, RefundForm
 from .models import Item, OrderItem, Order, BillingAddress, Payment, Coupon, Refund, Category
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
-
+from django.template.response import TemplateResponse
 
 # Create your views here.
 import random
@@ -38,7 +38,7 @@ def create_item(request):
     else:
         form = ItemForm()
 
-    return render(request, 'create_item.html', {'form': form})
+    return TemplateResponse(request, 'create_item.html', {'form': form})
 
 
 @login_required
@@ -56,9 +56,10 @@ def delete_item(request):
 
 
 class PaymentView(View):
-    def get(self, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         # order
         order = Order.objects.get(user=self.request.user, ordered=False)
+        user = request.user
         if order.billing_address:
             context = {
                 'order': order,

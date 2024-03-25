@@ -127,7 +127,7 @@ class Order(models.Model):
     received = models.BooleanField(default=False)
     refund_requested = models.BooleanField(default=False)
     refund_granted = models.BooleanField(default=False)
-
+    ordered_date = models.DateTimeField(auto_now_add=True)
     '''
     1. Item added to cart
     2. Adding a BillingAddress
