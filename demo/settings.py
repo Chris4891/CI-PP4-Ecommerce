@@ -4,9 +4,8 @@ from decouple import config
 
 ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 
-DEBUG = True
+DEBUG = False
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
@@ -87,7 +86,6 @@ DATABASES = {
 }
 
 if ENVIRONMENT == 'production':
-    DEBUG = True
     SECRET_KEY = os.getenv('SECRET_KEY')
     SESSION_COOKIE_SECURE = True
     SECURE_BROWSER_XSS_FILTER = True
@@ -113,11 +111,6 @@ SOCIALACCOUNT_PROVIDERS = {
         # For each OAuth based provider, either add a ``SocialApp``
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
-        'APP': {
-            'client_id': '123',
-            'secret': '456',
-            'key': '666'
-        }
     }
 }
 
@@ -125,5 +118,3 @@ SOCIALACCOUNT_PROVIDERS = {
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-STRIPE_PUBLIC_KEY = 'pk_test_lX3r6OMjOU2yzFsNSHq6belT00EY82kZmH'
-STRIPE_SECRET_KEY = 'sk_test_tn0CTDaIJHUJyAqhsf39cfsC00LNjsqDnb'
